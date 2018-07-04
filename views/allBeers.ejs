@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="/js/lib/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <title>Cerveja</title>
+    
+  </head>
+    <body>
+      
+        <%data.sort(function(a, b){%>
+           <%return b.score-a.score%>
+        <%})%>
+      
+      <p>Number of beers drank: <span id='amount'> </span> </p>     
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Drinker</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Brewery</th>
+            <th scope="col">Location</th>
+            <th scope="col">Size</th>
+            <th scope="col">Drunk</th>
+            <th scope="col">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i = 0; i < data.length; i++){%>
+            <tr>
+              <th scope="row" class='id'><%=data[i].date%></th>
+              <td><%=data[i].drinker%></td>
+              <td><%=data[i].name%></td>
+              <td><%=data[i].description%></td>
+              <td><%=data[i].brewery%></td>
+              <td><%=data[i].location%></td>
+              <td><%=data[i].size%></td>
+              <td><%=data[i].drunk%></td>
+              <td><%=data[i].score%></td>
+            </tr>
+          <%}%>
+        </tbody>
+      </table>
+      <div class='moreBeer'>
+        <a href="/">Drink more?</a>
+        <span id='slide'></span>
+        <a href="/beers/map">Places we drank beer!</a>
+      </div>
+      <script src='/js/beer.js'></script>
+  </body>
+</html>
+
+
+
+
+
+
+

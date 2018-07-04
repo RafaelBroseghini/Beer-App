@@ -1,0 +1,31 @@
+body,html {
+  height:100%;
+  background: #fceabb;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(bottom, #f8b500, #fceabb);
+  background: -moz-linear-gradient(bottom, #f8b500, #fceabb);
+  background: -o-linear-gradient(bottom, #f8b500, #fceabb);
+  background: linear-gradient(to top, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: hidden;
+}
+
+div {
+  text-align: center;
+}
+
+#map {
+  height: 90%;
+  width: 90%;
+  overflow: hidden;
+  margin: 1% 5%;
+  border: 2px solid yellow;
+  border-radius: 5px;
+}
+
+
+.hide {
+  display: none;
+}
+
+#slide {
+  margin: auto 25%;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/lib/jquery-3.3.1.min.js"></script>
+  <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD3weurNK33fOlKCfokaTQWz6NKN7z8nT4&callback=initMap"></script>
+  <title>Around the Globe</title>
+  <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles2.css">
+  
+</head> 
+<body>
+  
+  <% for(var i = 0; i < data.length; i++){%>
+    <%if (typeof(data[i].latLong)!='undefined'){%>
+        <li class="hide"><%=data[i].latLong.lat%> <%=data[i].latLong.lng%></li>
+    <%}%>
+  <%}%>
+  
+    <div id="map">
+    </div>
+  <div>
+    <a href="/">Go home!</a>
+    <span id='slide'></span>
+    <a href="/beers">All the beers!</a>
+  </div>
+  <script src='/js/map.js'>  </script>
+  </body>
+</html>

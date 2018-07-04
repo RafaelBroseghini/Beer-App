@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="/js/lib/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <title>Beer!</title>
+    
+  </head>
+    <body>
+      
+      <div class='title'>
+        <blockquote class="blockquote">
+          <p class="mb-0">He was a wise man who invented beer.</p>
+          <footer class="blockquote-footer">Unknown</footer>
+        </blockquote>
+      </div>
+        
+      <div class="container">
+        <form action='/beers' method='POST' id='form'>
+          <div class='form-group col-md-6' id='drinkerDiv'>
+            <span>Drinker: </span>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="mo" name="drinker" class="custom-control-input drinker" required>
+              <label class="custom-control-label" for="mo">Mo</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="rafa" name="drinker" class="custom-control-input drinker" required>
+              <label class="custom-control-label" for="rafa">Rafa</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="name">Beer Name</label>
+              <input type="text" class="form-control"  placeholder="Beer name" id='name' name="name" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="description">Description</label>
+              <input type="text" class="form-control"  placeholder="This beer is:" id='description' name = "description" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="brewery">Brewery</label>
+              <input type="text" class="form-control"  placeholder="This beer was brewed at:" id='brewery' name="brewery" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="location">Location</label>
+              <input type="text" class="form-control"  placeholder="City/Town & State" id='location' name="location" required>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="barRest">Which bar/pub?</label>
+              <input type="text" class="form-control"  placeholder="(Heineken Bar)" id='barRest' name="barRest" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="size">Size</label>
+              <input type="text" class="form-control" id="size" name="size" placeholder='12 oz'required>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="drunk">How much have you had?</label>
+              <select class="form-control" id='drunk' name='drunk' required>
+                <option value=''>Was I drunk?</option>
+                <option value="First Drink">First Drink</option>
+                <option value="Second Drink">Second Drink</option>
+                <option value="Third Drink">Third Drink</option>
+                <option value="Tipsy">Tipsy</option>
+                <option value="Drunk">Drunk</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="score">Score</label>
+              <input type="text" class="form-control" id='score' name='score' placeholder='0-100' required>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="date">Date</label>
+              <input type="text" class="form-control" id='date' name='date' placeholder='12/12/1995' required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-warning">Cheers!</button>
+        </form>
+        <div class='moreBeer'>
+          <a href="/beers">All the beers we have drank!</a>
+          <span id="slide"> </span>
+          <a href="/beers/map">All the places we drank beer at!</a>
+        </div>
+      </div>
+      <script src='/js/beer.js'></script>
+  </body>
+</html>

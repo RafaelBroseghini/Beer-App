@@ -1,0 +1,65 @@
+body,html {
+  height: 100%;
+  background: #fceabb;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(bottom, #f8b500, #fceabb);
+  background: -moz-linear-gradient(bottom, #f8b500, #fceabb);
+  background: -o-linear-gradient(bottom, #f8b500, #fceabb);
+  background: linear-gradient(to top, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: hidden;
+}
+
+blockquote {
+  text-align: center;
+  font-family:"Shrikhand";
+}
+
+p {
+  font-size: 2em;
+  text-align: center;
+  font-family:"Shrikhand";
+}
+
+input::-moz-placeholder {
+  font-family:"Roboto";
+  font-weight: 300;
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-family:"Roboto";
+  font-weight: 300;
+}
+
+.btn-warning {
+  background-color: orange;
+}
+
+.title {
+  margin:35px 0;
+}
+
+.container {
+  height: 100%;
+}
+
+.moreBeer {
+  margin-top:35px;
+  text-align:center;
+}
+
+#form {
+  font-family:"Roboto";
+  font-weight: 300;
+}
+
+#drinkerDiv {
+  padding: 0;
+}
+
+#map {
+  height: 100%;
+}
+
+#slide {
+  background-color:red;
+  margin: auto 25%;
+}
