@@ -24,6 +24,6 @@ app.get("*", function(req, res){
 })
 
 
-app.listen(3000, function(){
-  console.log("BEER APP BACK!!!!")
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Your beer's awaiting on port 3000!")
 })
